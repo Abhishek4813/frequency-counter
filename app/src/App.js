@@ -7,7 +7,16 @@ class App extends React.Component {
     this.Number=React.createRef();
   }
   submit=()=>{
-    console.log(this.Number.current.value);
+    fetch("http://localhost:8000",{
+      method:'post',
+      body:JSON.stringify({Number:this.Number.current.value}),
+      headers:{
+        "content-Type":"application/json",
+        'credentials':'cross-origin',
+      }
+    })
+    .then(response=>response.json())
+    .then(data=>console.log(data));
   }
   render(){
   return (
