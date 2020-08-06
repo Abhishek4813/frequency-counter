@@ -1,26 +1,23 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+class App extends React.Component {
+  constructor(){
+    super();
+    this.Number=React.createRef();
+  }
+  submit=()=>{
+    console.log(this.Number.current.value);
+  }
+  render(){
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <div className="form">
+        <input type="number" min="1" placeholder="Enter A Number" ref={this.Number}/>
+        <input type="submit" onClick={this.submit}/></div>
     </div>
   );
+}
 }
 
 export default App;
