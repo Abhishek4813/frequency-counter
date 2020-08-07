@@ -22,6 +22,15 @@
   padding:0px 70px;
   box-shadow: 2px 2px 14px black;
   min-width:180px;
+  overflow:auto;
+}
+table{
+  justify-content: unset !important;
+}
+.loading-text{
+  margin-top:8px;
+  font-size: 20px;
+  font-weight: bold;
 }
 .form input{
   width:100%;
@@ -61,6 +70,17 @@
 .App-link {
   color: #61dafb;
 }
+table tr{
+ border-bottom:1px solid blueviolet;
+ padding:5px;
+}
+thead th{
+  width: 100% !important;
+}
+td,th{
+  padding:4px 20px;
+  width:40px;
+}
 
 @keyframes App-logo-spin {
   from {
@@ -68,5 +88,11 @@
   }
   to {
     transform: rotate(360deg);
+  }
+}
+@media only screen and (max-width:790px){
+  table{
+    width:90% !important;
+    padding: 0px 30px !important;
   }
 }

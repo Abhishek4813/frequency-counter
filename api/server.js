@@ -11,6 +11,7 @@ app.use(bodyparser.json());
 
 app.post('/',function(req,res){
     var n=req.body.Number;
+    var words={};
     const file = fs.createWriteStream("file.txt");
     http.get("https://terriblytinytales.com/test.txt", function(response,err){
     if(response){
@@ -20,9 +21,28 @@ app.post('/',function(req,res){
             console.log(err);
             return;
         }
-        data=data.replace(/[!"#$%&'()*+,-./:;<=>?[\]^_`{|}~@–\n\t]/g," ");
-        console.log(data.split(" "));
-        res.status(200).json({status:n});
+        data=data.replace(/[!"#$%&'()*+,-./:;<=>?[\]^_`{|}~@–0-9]/g,"");
+        data=data.split(/\s+/);
+        data.forEach((key)=>{
+            if (key!=='' && words.hasOwnProperty(key)){
+                words[key]+=1;
+            }
+            else{
+                words[key]=1; 
+            }
+        });
+        var words_Array=[];
+        words_Array=Object.keys(words).map((key)=>{
+            return{
+                value:key,
+                count:words[key],
+            }
+        })
+        words_Array.sort(function(a,b){
+            return b.count-a.count;
+        })
+        console.log();
+        res.status(200).json(words_Array.slice(0,n));
     })
 }
 else{
