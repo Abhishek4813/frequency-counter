@@ -1,5 +1,5 @@
 # frequency-counter
-A nodejs js, React based single page application that take number(n) form user and display top n words inside the file hosted at https://terriblytinytales.com/test.txt.
+A nodejs js, React based single page application that takes number(n) form user and display top n words inside the file hosted at https://terriblytinytales.com/test.txt.
 
 # App Hosting
   https://powerful-river-66941.herokuapp.com/
