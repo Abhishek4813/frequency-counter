@@ -17,6 +17,10 @@ class App extends React.Component {
     })
   }
   submit=()=>{
+     if(this.Number.current.value<=0){
+      window.alert("Number should be greater then or equal to 1");
+      return;
+    }
     this.setState({
       isLoading:true
     })
