@@ -28,7 +28,7 @@ Screensort: [https://drive.google.com/file/d/1-ZXGgs9IskkPpJNDUuFNqjYq8QUcXqOg/v
 ### N= 8 :
 Screensort :[https://drive.google.com/file/d/1XOMMC7DHSZXYjtLVZir-eQ5KBddqNPfa/view?usp=sharing]
 
-### N=1000: (which is greater then total words in the file)
+### N=10000: (which is greater then total words in the file)
 
 Screensort : [https://drive.google.com/file/d/1jXrbJazbAPJfwxe0bOfDzE9uyuDPyCRF/view?usp=sharing]
 
